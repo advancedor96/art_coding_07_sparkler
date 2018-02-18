@@ -80,10 +80,10 @@ let init = function(){
 	canvas.height = window.innerHeight;
 	ctx = canvas.getContext('2d');
 
-	// canvas.addEventListener('touchstart', handleTouched, false);
-	// canvas.addEventListener('touchmove', handleTouched, false);
-	// canvas.addEventListener('mousedown', updateMousePos, false);
-	// canvas.addEventListener('mousemove', updateMouseMove, false);
+	canvas.addEventListener('touchstart', handleTouched, false);
+	canvas.addEventListener('touchmove', handleTouched, false);
+	canvas.addEventListener('mousedown', updateMousePos, false);
+	canvas.addEventListener('mousemove', updateMouseMove, false);
 
 	window.addEventListener('resize', resize);
 
@@ -96,7 +96,7 @@ const resize = ()=>{
 	canvas.height = window.innerHeight;
 }
 const updateMouseMove = (e)=>{
-	console.log('mousemove e',e);
+	// console.log('mousemove e',e);
 	e.preventDefault();
 	mx = e.clientX;
 	my = e.clientY;
@@ -106,8 +106,6 @@ const handleTouched = (event)=>{
 	let touches = event.changedTouches,
 		first = touches[0],
 		type = "";
-	console.log('touches',touches);
-	console.log('first',first);
 	switch(event.type){
 		case "touchstart": type = "mousedown"; break;
 		case "touchmove": type = "mousemove"; break;

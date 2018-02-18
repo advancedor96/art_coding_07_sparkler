@@ -12,6 +12,7 @@ canvas{
 }
 
 .logo{
+	pointer-events: none;
 	position: absolute;
 	top: 1.6rem;
 	font-size: 1.5rem;
@@ -20,12 +21,13 @@ canvas{
 	z-index: 1;
 }
 .text{
+	pointer-events: none;
 	position: absolute;
-	top: 1.6rem;
-	font-size: 11vmin;
-	left: 50%;
-	transform: translateX(-50%);
-	color: rgba(255, 255, 255, 0.1);
+	top: -42vh;
+	font-size: 151vmin;
+	left: 11vw;
+	/* transform: translateX(-50%); */
+	color: rgba(255, 255, 255, 0.3);
 	z-index: 1;
 
 }
